@@ -86,6 +86,6 @@ function updateButton() {
     }
 
 }
-
+//add an event listener for when the 'Update settings' button is pressed
 SettingsBillAddBtnElem.addEventListener('click', settingsButton);
 updateSettings.addEventListener('click', updateButton);
