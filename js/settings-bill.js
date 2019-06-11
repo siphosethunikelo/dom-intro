@@ -80,12 +80,7 @@ function updateButton() {
         if (totalCostSettings >= criticalLevelSettingValue) {
             totalSettingsElem.classList.add("danger");
         }
-        else if (totalCostSettings >= warningLevelSettingValue) {
-            totalSettingsElem.classList.add("warning");
-        }
-    }
-
-}
-//add an event listener for when the 'Update settings' button is pressed
+    }  
+} 
 SettingsBillAddBtnElem.addEventListener('click', settingsButton);
-updateSettings.addEventListener('click', updateButton);
+updateSettings.addEventListener('click',updateButton);

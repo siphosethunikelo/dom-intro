@@ -37,17 +37,23 @@ var checkedRadioBtn1 = document.querySelector("input[name='billItemType']:checke
         smsTotalOne += 0.75;
     }
 
+    
+
 // console.log(callTotalOneElement)
      callTotalTwoElement.innerHTML = callTotalOne.toFixed(2);
      smsTotalElement.innerHTML= smsTotalOne.toFixed(2);
-    totalCostTwo = callTotalOne + smsTotalOne;
-    totalTwoElement.innerHTML = totalCostTwo.toFixed(2);
+     totalCostOne = callTotalOne + smsTotalOne;
+    totalTwoElement.innerHTML = totalCostOne.toFixed(2);
 
-    if(callTotalOne >= 50){
+    if(totalCostOne >= 50){
+        totalTwoElement.classList.remove("warning");
         totalTwoElement.classList.add("danger");
-    }
-  else  if(callTotalOne >= 30){
+    }else if(totalCostOne >= 30){
+    totalTwoElement.classList.remove("danger");
         totalTwoElement.classList.add("warning");
+    }else{
+        totalTwoElement.classList.remove("warning");
+        totalTwoElement.classList.remove("danger"); 
     }
 
 }
